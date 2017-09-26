@@ -85,7 +85,7 @@ client.onMessageArrived = function (message) {
            intmpudata = parseInt(message.payloadString);
            var xaxisstring = m.toString();
            var yaxisstring = h.toString();
-           var xylabel = yaxisstring + " " + xaxisstring;
+           var xylabel = yaxisstring + " :" + xaxisstring;
            addData(myLineChart,xylabel,intmpudata);
 document.getElementById("messages").innerHTML= message.payloadString;
     client.unsubscribe("chart/topic");

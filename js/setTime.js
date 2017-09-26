@@ -80,7 +80,7 @@ document.getElementById("suscribe").addEventListener("click", function(){
 setInterval(function(){
     client.subscribe('chart/topic', {qos: 2});
     // alert("Subscribed")
-},10000)
+},2000)
 });
 
 document.getElementById("massagestop").addEventListener("click", function(){
