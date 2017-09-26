@@ -1,0 +1,18 @@
+.heading{
+  text-align: center;
+}
+#cancle{
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+#time{
+  margin-bottom: : 15px;
+}
+
+.container{
+	float: right;
+  justify-content: center;
+    align-items: center;
+}
+

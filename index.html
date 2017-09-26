@@ -1,0 +1,86 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script src="http://www.hivemq.com/demos/websocket-client/js/mqttws31.js" type="text/javascript"></script>
+  <title> Demo App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Website Title & Description for Search Engine purposes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+</head>
+
+<body>
+  <center>
+  <div class="container">
+    <div class="card" style="padding: 5px;">
+    <p id="currentTime"></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="heading text-primary" style="color: #000">Set Alarm</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <button onclick="client.connect(options);" class="btn btn-primary ">Connect</button>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+    <div class="col s3"></div>
+    <div id="time" class="col s6">
+      <input type="time" id="timeonly">
+    </div>
+  </div>
+    <br>
+<div class="row">
+    <div class=""></div>
+    
+    <div class="col s6"><button  id="save" class="btn btn-primary ">Save</button></div>
+    
+    <div class="col s6"><button id="cancle" class="btn btn-primary " onclick="canlcelAll()">Cancel</button></div>
+    <br>
+    </div>
+<div class="row">
+<div class=""></div>
+<div class="col s6"><button class="btn btn-primary" id="massage">Massage</button></div>
+<div class="col s6"><button class="btn btn-primary" id="massagestop">Stop</button></div>
+    </div>
+    <p id="demo"></p>
+    <p id="hours"></p>
+    <p id="min"></p>
+    <p id="milliscnd"></p>
+
+    <div class="row">
+    <div class=""></div>  
+    <div class="col s6"><button  class="btn btn-primary" id="suscribe">Subscribe</button></div>
+    <!-- <button>3. Publish</button> -->
+    <div class="col s6"><button onclick="client.disconnect();" class="btn btn-primary">Disconnect</button>
+    <p id="messages"></p></div>
+    </div>
+
+
+  </div><!-- end container -->
+  <div class="container">
+    <canvas id="myChart" width="450" height="150"></canvas>
+  </div></div>
+</center>
+
+  <script type="text/javascript" src="js/setTime.js"></script>
+  <script type="text/javascript" src="js/connect.js"></script>
+<!--           <script type="text/javascript" src="chart.js"></script>
+-->        </div>
+
+</body>
+</html>
